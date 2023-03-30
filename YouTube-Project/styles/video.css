@@ -1,0 +1,122 @@
+.video-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+@media (max-width: 750px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+} 
+@media (min-width: 751px) and (max-width: 999px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .video-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+.thumbnail {
+    width: 100%;
+}
+
+.thumbnail-row {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.video-time {
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    padding: 4px 4px 4px 4px;
+     
+}
+.video-info-grid {
+    display: grid;
+    grid-template-columns:50px 1fr;
+}
+.profile-picture {
+    width: 36px;
+    border-radius: 50%;
+    
+}
+
+.video-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+.video-stats,
+.video-author,
+.sub-tooltip {
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+}
+.video-author {
+    margin-bottom: 4px;
+}
+
+.channel-picture {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.channel-tooltip {
+    position: absolute;
+    display: flex;
+    background-color: white;
+    border-radius: 4px;
+    font-family: Roboto, Arial;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    box-shadow: 3px 3px 10px rgb(0 0 0 / 0.3);
+    bottom: -60px;
+    right: -160px;
+    z-index: 100;
+    transition: opacity 0.15s;
+}
+
+.channel-picture:hover .channel-tooltip {
+    opacity: 1;
+}
+
+.channel-tooltip .profile-picture{
+    width: 45px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.title-sub {
+    margin-left: 8px;
+    margin-right: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title-tooltip {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
